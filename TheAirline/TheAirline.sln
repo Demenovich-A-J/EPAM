@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediateka", "Mediateka\Mediateka.csproj", "{31AE2C32-0A00-4BD4-B21F-0965889AF82F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheAirline", "TheAirline\TheAirline.csproj", "{67CD5B8C-EC74-46F4-8CE5-3ECF75BAB4C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31AE2C32-0A00-4BD4-B21F-0965889AF82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31AE2C32-0A00-4BD4-B21F-0965889AF82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31AE2C32-0A00-4BD4-B21F-0965889AF82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31AE2C32-0A00-4BD4-B21F-0965889AF82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CD5B8C-EC74-46F4-8CE5-3ECF75BAB4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CD5B8C-EC74-46F4-8CE5-3ECF75BAB4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CD5B8C-EC74-46F4-8CE5-3ECF75BAB4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CD5B8C-EC74-46F4-8CE5-3ECF75BAB4C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

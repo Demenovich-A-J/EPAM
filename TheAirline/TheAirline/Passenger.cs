@@ -8,16 +8,19 @@ namespace TheAirline
 {
     class Passenger : Aircraft
     {
-        private readonly int _capacity;
+        private int _capacity;
 
         public Passenger(string name, double range, double fuelConsumption, int capacity) : base(name, range, fuelConsumption)
         {
-            _capacity = capacity;
+            Capacity = capacity;
         }
 
+        public Passenger() : base()
+        { }
         public int Capacity
         {
             get { return _capacity; }
+            set { _capacity = value; }
         }
     }
 }

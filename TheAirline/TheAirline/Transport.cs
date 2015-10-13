@@ -8,15 +8,16 @@ namespace TheAirline
 {
     class Transport : Aircraft
     {
-        private readonly double _loadCapacity;
+        private double _loadCapacity;
         public Transport(string name, double range, double fuelConsumption, double loadCapacity) : base(name, range, fuelConsumption)
         {
-            _loadCapacity = loadCapacity;
+            LoadCapacity = loadCapacity;
         }
 
         public double LoadCapacity
         {
             get { return _loadCapacity; }
+            set { _loadCapacity = value; }
         }
     }
 }

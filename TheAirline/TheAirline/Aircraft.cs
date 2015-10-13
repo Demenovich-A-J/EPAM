@@ -2,31 +2,35 @@
 {
     abstract class Aircraft
     {
-        private readonly string _name;
-        private readonly double _range;
-        private readonly double _fuelConsumption;
+        private string _name;
+        private double _range;
+        private double _fuelConsumption;
 
         protected Aircraft(string name, double range, double fuelConsumption)
         {
-            _name = name;
-            _range = range;
-            _fuelConsumption = fuelConsumption;
+            Name = name;
+            Range = range;
+            FuelConsumption = fuelConsumption;
         }
 
+        protected Aircraft() { }
+
+        public double FuelConsumption
+        {
+            get { return _fuelConsumption; }
+            set { _fuelConsumption = value; }
+        }
 
         public string Name
         {
             get { return _name; }
+            set { _name = value; }
         }
 
         public double Range
         {
             get { return _range; }
-        }
-
-        public double FuelConsumption
-        {
-            get { return _fuelConsumption; }
+            set { _range = value; }
         }
     }
 }

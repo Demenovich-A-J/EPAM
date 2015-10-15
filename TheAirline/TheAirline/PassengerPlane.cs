@@ -7,7 +7,7 @@ using TheAirline.Interfaces;
 
 namespace TheAirline
 {
-    class PassengerPlane : IPlane , IPassenger
+    class PassengerPlane : IPassenger, IPlane
     {
         public string Name { get; private set; }
         public double Range { get; private set; }
@@ -20,6 +20,14 @@ namespace TheAirline
             Range = range;
             FuelConsumption = fuelConsumption;
             Capacity = capacity;
+        }
+
+        public override string ToString()
+        {
+            return "Name : " + Name 
+                + "\nRange : " + Range 
+                + "\nFuel Consumption : " + FuelConsumption
+                + "\nCapacity : " + Capacity + "\n";
         }
 
         public int CompareTo(IPlane other)

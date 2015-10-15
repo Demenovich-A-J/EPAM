@@ -21,6 +21,15 @@ namespace TheAirline
         public double Range { get; private set; }
         public double FuelConsumption { get; private set; }
         public double LoadCapacity { get; private set; }
+
+        public override string ToString()
+        {
+            return "Name : " + Name
+                + "\nRange : " + Range
+                + "\nFuel Consumption : " + FuelConsumption
+                + "\nLoad Capacity : " + LoadCapacity + "\n";
+        }
+
         public int CompareTo(IPlane other)
         {
             return this.Range.CompareTo(other.Range);

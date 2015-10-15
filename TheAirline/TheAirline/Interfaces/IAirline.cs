@@ -10,10 +10,14 @@ namespace TheAirline.Interfaces
     {
         string AirlineName { get; }
         List<IPlane> Planes { get; }
+        int Сapacity { get; }
+        double LoadCapacity { get; }
+        List<IPlane> SearchPlane(int from, int to);
         int TotalCapcity();
+        double TotalLoadCapcity();
         void Sort();
         void Add(IPlane plane);
-        void Remove(int index);
+        void Remove(IPlane itemPlane);
 
     }
 }

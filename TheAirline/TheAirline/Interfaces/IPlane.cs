@@ -7,5 +7,6 @@ namespace TheAirline.Interfaces
         string Name { get; }
         double Range { get; }
         double FuelConsumption { get; }
+
     }
 }

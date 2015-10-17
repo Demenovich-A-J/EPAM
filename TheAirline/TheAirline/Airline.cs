@@ -16,55 +16,33 @@ namespace TheAirline
         }
 
         public string AirlineName { get; private set; }
-        public List<IPlane> Planes { get; private set; }
+        public IList<IPlane> Planes { get; private set; }
         public int Сapacity { get; private set; }
         public double LoadCapacity { get; private set; }
 
-        public List<IPlane> SearchPlane(int from, int to)
+        public IList<IPlane> SearchPlane(int from, int to)
         {
             return Planes.Where(plane => plane.FuelConsumption >= from && plane.FuelConsumption <= to).ToList();
         }
 
         public int TotalCapcity()
         {
-            foreach (var plane in Planes)
-            {
-                if (plane.GetType() == typeof (PassengerPlane))
-                {
-                    var passenger = plane as PassengerPlane;
-
-                    if (passenger != null)
-                    {
-                        Сapacity += passenger.Capacity;
-                    }
-                }
-            }
+            Сapacity = Planes.Where(x => x is IPassenger).Cast<IPassenger>().Sum(x => x.Capacity);
 
             return Сapacity;
         }
 
         public double TotalLoadCapcity()
         {
-            foreach (var plane in Planes)
-            {
-                if (plane.GetType() == typeof(TransportPlane))
-                {
-                    var transport = plane as TransportPlane;
-
-                    if (transport != null)
-                    {
-                        LoadCapacity += transport.LoadCapacity;
-                    }
-                }
-            }
+            LoadCapacity = Planes.Where(x => x is ITransport).Cast<ITransport>().Sum(x => x.LoadCapacity);
 
             return LoadCapacity;
         }
 
 
-        public void Sort()
+        public void Sort(IComparer<IPlane> comparer)
         {
-            Planes.Sort();
+            Planes = Planes.OrderBy((x => x),comparer).ToList();
         }
 
         public void Add(IPlane plane)
